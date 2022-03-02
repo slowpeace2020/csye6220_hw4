@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/mvc  http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!--  配置内部资源视图解析器 统一配置资源链接的前缀后缀-->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/view/"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+
+    <!--  <bean name="beanNameUrlHandlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>-->
+    <!--  <bean id="beanNameController" name="part/part5" class="edu.neu.csye6220.part5.BeanNameController" />-->
+    <!--  <bean id="booksController" name="/books.htm" class="edu.neu.csye6220.part5.BooksController" />-->
+
+      <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+    <!--  <bean id="classNameHandlerMapping" class="edu.neu.csye6220.part4.ClassNameController" />-->
+      <bean id="movieClassNameHandlerMapping" class="edu.neu.csye6220.controller.MovieController" />
+</beans>

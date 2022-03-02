@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="part4:war">
+    <output-path>$PROJECT_DIR$/part4/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>part4</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="csye6220_homework4/part4.war">
+      <element id="artifact" artifact-name="part4:war exploded" />
+    </root>
+  </artifact>
+</component>
