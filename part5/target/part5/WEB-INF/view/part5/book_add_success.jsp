@@ -5,7 +5,7 @@
   Time: 8:49 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <html>
@@ -21,6 +21,6 @@
         Book
     </c:if>
     Successfully</h1>
-<a href="${pageContext.request.contextPath}/WEB-INF/view/part5/books.jsp">Click here to go back to the main page</a>
+<a href="${pageContext.request.contextPath}/books.htm">Click here to go back to the main page</a>
 </body>
 </html>
