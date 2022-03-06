@@ -14,6 +14,6 @@
 <h1>hello mvc</h1>
 Name: ${user.name}<br>
 Age: ${user.age}<br>
-Object ID: ${userAddress}
+Object ID: ${user}
 </body>
 </html>

@@ -19,7 +19,7 @@
     <div class="container">
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="${pageContext.request.contextPath}/store/store_view" ><i class="fa fa-users"></i> ViewCart</a></li>
+                <li><a href="${pageContext.request.contextPath}/store/store_view.htm" ><i class="fa fa-users"></i> ViewCart</a></li>
             </ul>
         </div>
     </div>
@@ -54,7 +54,7 @@
     <div id="content">
         <c:if test="${list.size()>0}">
             <h4>The following item has been added to your shopping cart successfully</h4>
-            <form action="${pageContext.request.contextPath}/store/store_act" method="post">
+            <form action="${pageContext.request.contextPath}/store/store_act.htm" method="post">
                 <input type="hidden" name="action" value="delete">
                 <div style="margin-bottom: 20px">
                     <c:forEach items="${list}" var="keyword" varStatus="id">
@@ -63,7 +63,7 @@
                 </div>
             </form>
             <div>
-                <a href="${pageContext.request.contextPath}/store/store_view">View Cart</a>&nbsp;&nbsp;
+                <a href="${pageContext.request.contextPath}/store/store_view.htm">View Cart</a>&nbsp;&nbsp;
                 <a href="#userMeun" onclick="showAtRight('book_list.jsp')">Books</a>&nbsp;&nbsp;
                 <a href="#userMeun" onclick="showAtRight('movies.jsp')">Movie</a>&nbsp;&nbsp;
                 <a href="#userMeun" onclick="showAtRight('computers.jsp')">Computer</a>

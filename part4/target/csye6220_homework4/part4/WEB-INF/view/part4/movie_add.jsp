@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-<form action="${pageContext.request.contextPath}/movie" method="post">
+<form action="${pageContext.request.contextPath}/movie.htm" method="post">
 
     <table width="100%">
         <tr>

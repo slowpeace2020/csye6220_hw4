@@ -12,7 +12,7 @@
 </head>
 <body>
 <h1>Searching Movies</h1>
-<form action="${pageContext.request.contextPath}/movie" method="post">
+<form action="${pageContext.request.contextPath}/movie.htm" method="post">
     <tr>
         Keyword: &nbsp;&nbsp;&nbsp;&nbsp;<input name="keyword" value=""/>
     </tr>

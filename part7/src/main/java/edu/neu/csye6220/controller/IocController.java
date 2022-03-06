@@ -1,30 +1,20 @@
 package edu.neu.csye6220.controller;
 
 import edu.neu.csye6220.domain.User;
-import org.springframework.context.ApplicationContext;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.AbstractController;
 
-import static edu.neu.csye6220.ApplicationContextHolder.getApplicationContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 
-@Controller
-@RequestMapping("/")
-public class IocController {
 
-    @RequestMapping("/ioc")
-    public String ioc(Model model){
-        User user = getUser();
-        model.addAttribute("user",user);
-        model.addAttribute("userAddress",user.toString());
-        return "part7";
-    }
-
-    private User getUser(){
-//        ApplicationContext app = new ClassPathXmlApplicationContext("applicationContext.xml");
-        ApplicationContext app = getApplicationContext();
-        User user = app.getBean(User.class);
-        return user;
+public class IocController extends AbstractController {
+    @Override
+    protected ModelAndView handleRequestInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
+        ModelAndView model = new ModelAndView("part7");
+        User user = (User) this.getApplicationContext().getBean("user");
+        httpServletRequest.setAttribute("user",user);
+        return model;
     }
 }

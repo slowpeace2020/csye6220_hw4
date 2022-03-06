@@ -1,6 +1,6 @@
 package edu.neu.csye6220.controller;
 
-import edu.neu.csye6220.domain.User;
+import edu.neu.csye6220.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -9,18 +9,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
-@RequestMapping("/")
 public class AutoController {
-    private User user;
 
-    public AutoController(@Qualifier("userTest") User user) {
-        this.user = user;
-    }
+    @Autowired
+    private UserService userService;
 
-    @RequestMapping("/auto")
+    @RequestMapping("/auto.htm")
     public String ioc(Model model){
-        model.addAttribute("user",user);
-        model.addAttribute("userAddress",user.toString());
+        model.addAttribute("userService info",userService.getServiceInfo());
+        model.addAttribute("userService",userService);
         return "part8";
     }
 }

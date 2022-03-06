@@ -12,6 +12,6 @@
 </head>
 <body>
 <h1>1 Movie Added Successfully</h1>
-<a href="${pageContext.request.contextPath}/movie">Click here to go back to the main page</a>
+<a href="${pageContext.request.contextPath}/movie.htm">Click here to go back to the main page</a>
 </body>
 </html>

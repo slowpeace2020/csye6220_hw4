@@ -21,7 +21,7 @@ import java.util.*;
 @RequestMapping("/store")
 public class StoreController {
 
-    @RequestMapping(value = "/store_view",method = RequestMethod.GET)
+    @RequestMapping(value = "/store_view.htm",method = RequestMethod.GET)
     public String get(HttpServletRequest req) throws IOException {
         HttpSession session = req.getSession();
         System.out.println("there");
@@ -40,7 +40,7 @@ public class StoreController {
         return "part6/store";
     }
 
-    @RequestMapping(value = "/store_act",method = RequestMethod.POST)
+    @RequestMapping(value = "/store_act.htm",method = RequestMethod.POST)
     public String post(HttpServletRequest req) throws IOException {
         String action = req.getParameter("action");
         HttpSession session = req.getSession();
@@ -79,7 +79,7 @@ public class StoreController {
         return "part6/store";
     }
 
-    @RequestMapping(value = "/index",method = RequestMethod.GET)
+    @RequestMapping(value = "/index.htm",method = RequestMethod.GET)
     public String doGet(Model model) throws IOException {
         return "part6/store";
     }

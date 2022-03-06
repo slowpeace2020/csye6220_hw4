@@ -12,8 +12,7 @@
 </head>
 <body>
 <h1>hello mvc</h1>
-Name: ${user.name}<br>
-Age: ${user.age}<br>
-Object ID: ${userAddress}
+info: ${userService.serviceInfo}<br>
+Object ID: ${userService}
 </body>
 </html>

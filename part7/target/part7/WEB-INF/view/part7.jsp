@@ -8,12 +8,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <html>
 <head>
-    <title>MVC 7</title>
+    <title>Part7 MVC Annotation</title>
 </head>
 <body>
 <h1>hello mvc</h1>
 Name: ${user.name}<br>
 Age: ${user.age}<br>
-Address: ${userAddress}
+Object ID: ${user}
 </body>
 </html>

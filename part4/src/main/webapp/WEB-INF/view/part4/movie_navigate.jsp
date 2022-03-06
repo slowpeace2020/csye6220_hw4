@@ -14,7 +14,7 @@
 <h1>Welcome to our Movie Store</h1>
 <h3>Please make your selection below</h3>
 <div>
-    <form action="${pageContext.request.contextPath}/movie" method="get">
+    <form action="${pageContext.request.contextPath}/movie.htm" method="get">
         <select name="page_name">
             <option value="/movie_search">Browse Movies</option>
             <option value="/movie_add">Add New Movie to Database</option>

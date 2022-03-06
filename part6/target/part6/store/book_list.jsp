@@ -14,7 +14,7 @@
 <div class="panel panel-default">
     <div class="panel-heading">Shop for Books</div>
     <!-- Default panel contents -->
-    <form action="${pageContext.request.contextPath}/store/store_act" method="post">
+    <form action="${pageContext.request.contextPath}/store/store_act.htm" method="post">
         <input type="hidden" name="action" value="add">
         <table class="table table-striped">
             <tr>

@@ -16,4 +16,9 @@ http://www.springframework.org/schema/mvc  http://www.springframework.org/schema
         <property name="suffix" value=".jsp"></property>
     </bean>
 
+    <bean name="beanNameUrlHandlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+    <!--  <bean id="beanNameController" name="part/part5" class="edu.neu.csye6220.part5.BeanNameController" />-->
+    <bean id="iocController" name="/ioc.htm" class="edu.neu.csye6220.controller.IocController" />
+
+
 </beans>
